@@ -6,10 +6,10 @@ class Bus:
 		self.cpu = cpu
 
 	def write(self, addr, data):
-		if addr >= 0000 and addr <= 0xFFFF:
+		if addr >= 0 and addr <= 0xFFFF:
 			self.ram[addr] = data
 
 	def read(self, addr, readonly = False):
-		if addr >= 0000 and addr <= 0xFFFF:
+		if addr >= 0 and addr <= 0xFFFF:
 			return self.ram[addr]
 		return 0
